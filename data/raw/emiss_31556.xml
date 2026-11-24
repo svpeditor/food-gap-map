@@ -1,0 +1,4443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GenericData
+ xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v1_0/message"
+ xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v1_0/common"
+ xmlns:compact="http://www.SDMX.org/resources/SDMXML/schemas/v1_0/compact"
+ xmlns:cross="http://www.SDMX.org/resources/SDMXML/schemas/v1_0/cross"
+ xmlns:generic="http://www.SDMX.org/resources/SDMXML/schemas/v1_0/generic"
+ xmlns:query="http://www.SDMX.org/resources/SDMXML/schemas/v1_0/query"
+ xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v1_0/structure"
+ xmlns:utility="http://www.SDMX.org/resources/SDMXML/schemas/v1_0/utility"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v1_0/message SDMXMessage.xsd">
+<Header Id="singHead">
+	<ID>244676412</ID>
+	<Test>false</Test>
+	<Truncated>false</Truncated>
+	<Prepared>2026-11-24T20:23:26</Prepared>
+	<Extracted>2026-11-24T20:23:26</Extracted>
+	<Sender id="UIS">
+		<Name xml:lang="en">Official statistics</Name>
+		<Name xml:lang="ru">Государственная статистика</Name>
+	</Sender>
+	<DataSetAgency>1</DataSetAgency>
+	<DataSetID>2403024</DataSetID>
+</Header>
+<CodeLists>
+	<structure:CodeList id="s_kategnasel">
+		<structure:Name xml:lang="ru">Категории населения</structure:Name>
+		<structure:Code value="4">
+			<structure:Description xml:lang="ru">Все население</structure:Description>
+		</structure:Code>
+		<structure:Code value="1">
+			<structure:Description xml:lang="ru">Городское население</structure:Description>
+		</structure:Code>
+		<structure:Code value="2">
+			<structure:Description xml:lang="ru">Сельское население</structure:Description>
+		</structure:Code>
+	</structure:CodeList>
+	<structure:CodeList id="s_OKATO">
+		<structure:Name xml:lang="ru">Классификатор объектов административно-территориального деления (ОКАТО)</structure:Name>
+		<structure:Code value="643">
+			<structure:Description xml:lang="ru">Российская Федерация</structure:Description>
+		</structure:Code>
+		<structure:Code value="643004.АГ">
+			<structure:Description xml:lang="ru">Российская Федерация без учета новых субъектов (с 01.01.2023)</structure:Description>
+		</structure:Code>
+		<structure:Code value="030">
+			<structure:Description xml:lang="ru">Центральный федеральный округ</structure:Description>
+		</structure:Code>
+		<structure:Code value="14000000000">
+			<structure:Description xml:lang="ru">Белгородская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="15000000000">
+			<structure:Description xml:lang="ru">Брянская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="17000000000">
+			<structure:Description xml:lang="ru">Владимирская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="20000000000">
+			<structure:Description xml:lang="ru">Воронежская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="24000000000">
+			<structure:Description xml:lang="ru">Ивановская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="29000000000">
+			<structure:Description xml:lang="ru">Калужская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="34000000000">
+			<structure:Description xml:lang="ru">Костромская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="38000000000">
+			<structure:Description xml:lang="ru">Курская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="42000000000">
+			<structure:Description xml:lang="ru">Липецкая область</structure:Description>
+		</structure:Code>
+		<structure:Code value="46000000000">
+			<structure:Description xml:lang="ru">Московская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="54000000000">
+			<structure:Description xml:lang="ru">Орловская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="61000000000">
+			<structure:Description xml:lang="ru">Рязанская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="66000000000">
+			<structure:Description xml:lang="ru">Смоленская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="68000000000">
+			<structure:Description xml:lang="ru">Тамбовская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="28000000000">
+			<structure:Description xml:lang="ru">Тверская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="70000000000">
+			<structure:Description xml:lang="ru">Тульская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="78000000000">
+			<structure:Description xml:lang="ru">Ярославская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="45000000000">
+			<structure:Description xml:lang="ru">Город Москва столица Российской Федерации город федерального значения</structure:Description>
+		</structure:Code>
+		<structure:Code value="031">
+			<structure:Description xml:lang="ru">Северо-Западный федеральный округ</structure:Description>
+		</structure:Code>
+		<structure:Code value="86000000000">
+			<structure:Description xml:lang="ru">Республика Карелия</structure:Description>
+		</structure:Code>
+		<structure:Code value="87000000000">
+			<structure:Description xml:lang="ru">Республика Коми</structure:Description>
+		</structure:Code>
+		<structure:Code value="11000000000">
+			<structure:Description xml:lang="ru">Архангельская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="11100000000">
+			<structure:Description xml:lang="ru">Ненецкий автономный округ (Архангельская область)</structure:Description>
+		</structure:Code>
+		<structure:Code value="11001000000">
+			<structure:Description xml:lang="ru">Архангельская область (кроме Ненецкого автономного округа)</structure:Description>
+		</structure:Code>
+		<structure:Code value="19000000000">
+			<structure:Description xml:lang="ru">Вологодская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="27000000000">
+			<structure:Description xml:lang="ru">Калининградская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="41000000000">
+			<structure:Description xml:lang="ru">Ленинградская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="47000000000">
+			<structure:Description xml:lang="ru">Мурманская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="49000000000">
+			<structure:Description xml:lang="ru">Новгородская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="58000000000">
+			<structure:Description xml:lang="ru">Псковская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="40000000000">
+			<structure:Description xml:lang="ru">Город Санкт-Петербург город федерального значения</structure:Description>
+		</structure:Code>
+		<structure:Code value="032">
+			<structure:Description xml:lang="ru">Южный федеральный округ (по 2009 год)</structure:Description>
+		</structure:Code>
+		<structure:Code value="037">
+			<structure:Description xml:lang="ru">Южный федеральный округ (до 29.07.2016)</structure:Description>
+		</structure:Code>
+		<structure:Code value="040">
+			<structure:Description xml:lang="ru">Южный федеральный округ</structure:Description>
+		</structure:Code>
+		<structure:Code value="79000000000">
+			<structure:Description xml:lang="ru">Республика Адыгея (Адыгея)</structure:Description>
+		</structure:Code>
+		<structure:Code value="85000000000">
+			<structure:Description xml:lang="ru">Республика Калмыкия</structure:Description>
+		</structure:Code>
+		<structure:Code value="35000000000">
+			<structure:Description xml:lang="ru">Республика Крым</structure:Description>
+		</structure:Code>
+		<structure:Code value="03000000000">
+			<structure:Description xml:lang="ru">Краснодарский край</structure:Description>
+		</structure:Code>
+		<structure:Code value="12000000000">
+			<structure:Description xml:lang="ru">Астраханская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="18000000000">
+			<structure:Description xml:lang="ru">Волгоградская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="60000000000">
+			<structure:Description xml:lang="ru">Ростовская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="67000000000">
+			<structure:Description xml:lang="ru">Город федерального значения Севастополь</structure:Description>
+		</structure:Code>
+		<structure:Code value="038">
+			<structure:Description xml:lang="ru">Северо-Кавказский федеральный округ</structure:Description>
+		</structure:Code>
+		<structure:Code value="82000000000">
+			<structure:Description xml:lang="ru">Республика Дагестан</structure:Description>
+		</structure:Code>
+		<structure:Code value="26000000000">
+			<structure:Description xml:lang="ru">Республика Ингушетия</structure:Description>
+		</structure:Code>
+		<structure:Code value="83000000000">
+			<structure:Description xml:lang="ru">Кабардино-Балкарская Республика</structure:Description>
+		</structure:Code>
+		<structure:Code value="91000000000">
+			<structure:Description xml:lang="ru">Карачаево-Черкесская Республика</structure:Description>
+		</structure:Code>
+		<structure:Code value="90000000000">
+			<structure:Description xml:lang="ru">Республика Северная Осетия-Алания</structure:Description>
+		</structure:Code>
+		<structure:Code value="96000000000">
+			<structure:Description xml:lang="ru">Чеченская Республика</structure:Description>
+		</structure:Code>
+		<structure:Code value="07000000000">
+			<structure:Description xml:lang="ru">Ставропольский край</structure:Description>
+		</structure:Code>
+		<structure:Code value="033">
+			<structure:Description xml:lang="ru">Приволжский федеральный округ</structure:Description>
+		</structure:Code>
+		<structure:Code value="80000000000">
+			<structure:Description xml:lang="ru">Республика Башкортостан</structure:Description>
+		</structure:Code>
+		<structure:Code value="88000000000">
+			<structure:Description xml:lang="ru">Республика Марий Эл</structure:Description>
+		</structure:Code>
+		<structure:Code value="89000000000">
+			<structure:Description xml:lang="ru">Республика Мордовия</structure:Description>
+		</structure:Code>
+		<structure:Code value="92000000000">
+			<structure:Description xml:lang="ru">Республика Татарстан (Татарстан)</structure:Description>
+		</structure:Code>
+		<structure:Code value="94000000000">
+			<structure:Description xml:lang="ru">Удмуртская Республика</structure:Description>
+		</structure:Code>
+		<structure:Code value="97000000000">
+			<structure:Description xml:lang="ru">Чувашская Республика - Чувашия</structure:Description>
+		</structure:Code>
+		<structure:Code value="57000000000">
+			<structure:Description xml:lang="ru">Пермский край</structure:Description>
+		</structure:Code>
+		<structure:Code value="33000000000">
+			<structure:Description xml:lang="ru">Кировская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="22000000000">
+			<structure:Description xml:lang="ru">Нижегородская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="53000000000">
+			<structure:Description xml:lang="ru">Оренбургская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="56000000000">
+			<structure:Description xml:lang="ru">Пензенская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="36000000000">
+			<structure:Description xml:lang="ru">Самарская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="63000000000">
+			<structure:Description xml:lang="ru">Саратовская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="73000000000">
+			<structure:Description xml:lang="ru">Ульяновская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="034">
+			<structure:Description xml:lang="ru">Уральский федеральный округ</structure:Description>
+		</structure:Code>
+		<structure:Code value="37000000000">
+			<structure:Description xml:lang="ru">Курганская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="65000000000">
+			<structure:Description xml:lang="ru">Свердловская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="71000000000">
+			<structure:Description xml:lang="ru">Тюменская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="71100000000">
+			<structure:Description xml:lang="ru">Ханты-Мансийский автономный округ - Югра (Тюменская область)</structure:Description>
+		</structure:Code>
+		<structure:Code value="71140000000">
+			<structure:Description xml:lang="ru">Ямало-Ненецкий автономный округ (Тюменская область)</structure:Description>
+		</structure:Code>
+		<structure:Code value="71001000000">
+			<structure:Description xml:lang="ru">Тюменская область (кроме Ханты-Мансийского автономного округа-Югры и Ямало-Ненецкого автономного округа)</structure:Description>
+		</structure:Code>
+		<structure:Code value="75000000000">
+			<structure:Description xml:lang="ru">Челябинская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="035">
+			<structure:Description xml:lang="ru">Сибирский федеральный округ (до 03.11.2018)</structure:Description>
+		</structure:Code>
+		<structure:Code value="041">
+			<structure:Description xml:lang="ru">Сибирский федеральный округ</structure:Description>
+		</structure:Code>
+		<structure:Code value="84000000000">
+			<structure:Description xml:lang="ru">Республика Алтай</structure:Description>
+		</structure:Code>
+		<structure:Code value="93000000000">
+			<structure:Description xml:lang="ru">Республика Тыва</structure:Description>
+		</structure:Code>
+		<structure:Code value="95000000000">
+			<structure:Description xml:lang="ru">Республика Хакасия</structure:Description>
+		</structure:Code>
+		<structure:Code value="01000000000">
+			<structure:Description xml:lang="ru">Алтайский край</structure:Description>
+		</structure:Code>
+		<structure:Code value="04000000000">
+			<structure:Description xml:lang="ru">Красноярский край</structure:Description>
+		</structure:Code>
+		<structure:Code value="04100000000">
+			<structure:Description xml:lang="ru">Таймырский (Долгано-Ненецкий) автономный округ (Красноярский край)</structure:Description>
+		</structure:Code>
+		<structure:Code value="04130000000">
+			<structure:Description xml:lang="ru">Эвенкийский автономный округ (Красноярский край)</structure:Description>
+		</structure:Code>
+		<structure:Code value="25000000000">
+			<structure:Description xml:lang="ru">Иркутская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="25100000000">
+			<structure:Description xml:lang="ru">Усть-Ордынский Бурятский округ</structure:Description>
+		</structure:Code>
+		<structure:Code value="32000000000">
+			<structure:Description xml:lang="ru">Кемеровская область - Кузбасс</structure:Description>
+		</structure:Code>
+		<structure:Code value="50000000000">
+			<structure:Description xml:lang="ru">Новосибирская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="52000000000">
+			<structure:Description xml:lang="ru">Омская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="69000000000">
+			<structure:Description xml:lang="ru">Томская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="036">
+			<structure:Description xml:lang="ru">Дальневосточный федеральный округ (до 03.11.2018)</structure:Description>
+		</structure:Code>
+		<structure:Code value="042">
+			<structure:Description xml:lang="ru">Дальневосточный федеральный округ</structure:Description>
+		</structure:Code>
+		<structure:Code value="81000000000">
+			<structure:Description xml:lang="ru">Республика Бурятия</structure:Description>
+		</structure:Code>
+		<structure:Code value="76000000000">
+			<structure:Description xml:lang="ru">Забайкальский край</structure:Description>
+		</structure:Code>
+		<structure:Code value="98000000000">
+			<structure:Description xml:lang="ru">Республика Саха (Якутия)</structure:Description>
+		</structure:Code>
+		<structure:Code value="30000000000">
+			<structure:Description xml:lang="ru">Камчатский край</structure:Description>
+		</structure:Code>
+		<structure:Code value="05000000000">
+			<structure:Description xml:lang="ru">Приморский край</structure:Description>
+		</structure:Code>
+		<structure:Code value="08000000000">
+			<structure:Description xml:lang="ru">Хабаровский край</structure:Description>
+		</structure:Code>
+		<structure:Code value="10000000000">
+			<structure:Description xml:lang="ru">Амурская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="44000000000">
+			<structure:Description xml:lang="ru">Магаданская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="64000000000">
+			<structure:Description xml:lang="ru">Сахалинская область</structure:Description>
+		</structure:Code>
+		<structure:Code value="99000000000">
+			<structure:Description xml:lang="ru">Еврейская автономная область</structure:Description>
+		</structure:Code>
+		<structure:Code value="77000000000">
+			<structure:Description xml:lang="ru">Чукотский автономный округ</structure:Description>
+		</structure:Code>
+		<structure:Code value="039">
+			<structure:Description xml:lang="ru">Крымский федеральный округ</structure:Description>
+		</structure:Code>
+		<structure:Code value="76100001">
+			<structure:Description xml:lang="ru">Агинский Бурятский автономный округ (до 01.03.2008)</structure:Description>
+		</structure:Code>
+		<structure:Code value="30100001">
+			<structure:Description xml:lang="ru">Корякский автономный округ (Камчатская область) (до 01.07.2007)</structure:Description>
+		</structure:Code>
+		<structure:Code value="050">
+			<structure:Description xml:lang="ru">Северный экономический район</structure:Description>
+		</structure:Code>
+		<structure:Code value="051">
+			<structure:Description xml:lang="ru">Северо-Западный экономический район</structure:Description>
+		</structure:Code>
+		<structure:Code value="052">
+			<structure:Description xml:lang="ru">Центральный экономический район</structure:Description>
+		</structure:Code>
+		<structure:Code value="053">
+			<structure:Description xml:lang="ru">Волго-Вятский экономический район</structure:Description>
+		</structure:Code>
+		<structure:Code value="054">
+			<structure:Description xml:lang="ru">Центрально-Черноземный экономический район</structure:Description>
+		</structure:Code>
+		<structure:Code value="055">
+			<structure:Description xml:lang="ru">Поволжский экономический район</structure:Description>
+		</structure:Code>
+		<structure:Code value="056">
+			<structure:Description xml:lang="ru">Северо-Кавказский экономический район</structure:Description>
+		</structure:Code>
+		<structure:Code value="057">
+			<structure:Description xml:lang="ru">Уральский экономический район</structure:Description>
+		</structure:Code>
+		<structure:Code value="058">
+			<structure:Description xml:lang="ru">Западно-Сибирский экономический район</structure:Description>
+		</structure:Code>
+		<structure:Code value="059">
+			<structure:Description xml:lang="ru">Восточно-Сибирский экономический район</structure:Description>
+		</structure:Code>
+		<structure:Code value="060">
+			<structure:Description xml:lang="ru">Дальневосточный экономический район</structure:Description>
+		</structure:Code>
+		<structure:Code value="57100000">
+			<structure:Description xml:lang="ru">Коми-Пермяцкий автономный округ (до 01.12.2005)</structure:Description>
+		</structure:Code>
+	</structure:CodeList>
+</CodeLists>
+<Description Id="signObj">
+	<Indicator id="31556" name="Численность постоянного населения в среднем за год">
+		<Units>
+			<Unit value="человек"/>
+		</Units>
+		<Periodicities>
+			<Periodicity value="Годовая - не охарактеризована" releases="2-я декада марта " next-release="22.10.2027"/>
+			<Periodicity value="Годовая - не охарактеризована" releases="по специальному графику" next-release="22.10.2027"/>
+		</Periodicities>
+		<DataRange start="1990" end="2024"/>
+		<LastUpdate value="2026-10-22T20:54:20"/>
+		<Dimensions>
+			<Dimension value="s_kategnasel" agencyID="1">
+				<Name xml:lang="ru">Категории населения</Name>
+			</Dimension>
+			<Dimension value="s_OKATO" agencyID="1">
+				<Name xml:lang="ru">Классификатор объектов административно-территориального деления (ОКАТО)</Name>
+			</Dimension>
+		</Dimensions>
+		<Methodology value="Среднегодовая численность населения - средняя арифметическая из численностей населения на начало и  конец соответствующего года.  Показатель формируется в соответствии с официальной  статистической методологией, утвержденной приказом  Росстата от 03 июня 2010 г. № 209."/>
+		<Organization value="Федеральная служба государственной статистики"/>
+		<Department value="Управление статистики населения и здравоохранения"/>
+		<Allocations>
+			<Allocation id="1.8.1.">
+				<Name xml:lang="ru">По федеральному плану статработ / Федеральная служба государственной статистики / Демографические показатели / Оценка численности постоянного населения </Name>
+			</Allocation>
+			<Allocation id="2.10.19.">
+				<Name xml:lang="ru">По федеральному плану статработ / Росстат и другие субъекты официального статистического учета / Официальная статистическая информация, предоставляемая в соответствии с вопросниками международных организаций / Вопросники (форматы) для формирования и распространения официальной статистической информации государств - членов Евразийского экономического союза (ЕАЭС)</Name>
+			</Allocation>
+		</Allocations>
+		<Comment value="В отношении информации начиная с итогов за 2024 год  Правительством Российской Федерации принято решение  о временном приостановлении ее предоставления и  распространения в соответствии с ч. 10 ст. 5 Федерального закона от 29 ноября 2007 г. № 282-ФЗ «Об официальном  статистическом учете и системе государственной  статистики в Российской Федерации».  Расчет.  Статистические данные по Российской Федерации  публикуются без учета статистической информации по  Донецкой Народной Республике (ДНР), Луганской  Народной Республике (ЛНР), Запорожской и Херсонской  областям."/>
+		<Responsible>
+			<Name xml:lang="ru">Адигюзелова Н.Ю.</Name>
+			<Contacts xml:lang="ru">(495) 568-00-42 (доб. 99145) adigiuzelovaniu@rosstat.gov.ru</Contacts>
+		</Responsible>
+	</Indicator>
+</Description>
+<DataSet>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="643004.АГ"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="146135359"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="030"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="40248674"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="14000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1491342"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="15000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1137600"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="17000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1303939"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="20000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2266731"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="24000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="902195"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="29000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1067505"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="34000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="563546"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="38000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1055337"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="42000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1112280"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="46000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="8713497"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="54000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="689334"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="61000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1078316"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="66000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="860542"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="68000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="951475"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="28000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1195160"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="70000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1463965"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="78000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1183866"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="45000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="13212044"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="031"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="13858500"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="86000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="521403"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="87000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="717697"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="11000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="993753"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="11100000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="42065"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="11001000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="951688"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="19000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1118357"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="27000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1033409"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="41000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2047620"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="47000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="653901"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="49000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="569203"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="58000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="577814"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="40000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="5625343"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="040"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="16606575"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="79000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="500661"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="85000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="267179"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="35000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1905874"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="03000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="5837620"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="12000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="946505"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="18000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2443972"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="60000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="4144926"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="67000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="559838"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="038"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="10281009"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="82000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="3246057"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="26000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="530856"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="83000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="906839"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="91000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="468460"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="90000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="678853"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="96000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1564709"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="07000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2885235"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="033"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="28474755"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="80000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="4053369"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="88000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="668028"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="89000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="762393"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="92000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="4011311"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="94000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1430919"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="97000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1163415"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="57000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2489450"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="33000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1125173"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="22000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="3049878"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="53000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1822777"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="56000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1231496"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="36000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="3120204"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="63000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2377284"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="73000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1169058"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="034"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="12272516"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="37000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="748734"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="65000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="4222073"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="71000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="3911248"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="71100000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1770584"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="71140000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="519533"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="71001000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1621131"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="75000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="3390461"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="041"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="16530019"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="84000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="210430"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="93000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="338014"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="95000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="526866"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="01000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2107247"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="04000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2842054"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="25000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2326414"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="32000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2537452"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="50000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2788036"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="52000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1811950"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="69000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1041556"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="042"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="7863311"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="81000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="971530"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="76000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="984116"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="98000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1004112"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="30000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="288574"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="05000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1803026"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="08000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1275810"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="10000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="751564"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="44000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="133966"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="64000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="457594"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="99000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="145115"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="4"/>
+			<generic:Value concept="s_OKATO" value="77000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="47904"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="643004.АГ"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="109661370"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="030"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="33090555"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="14000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="974566"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="15000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="793736"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="17000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1011542"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="20000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1552414"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="24000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="741325"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="29000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="797854"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="34000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="420635"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="38000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="726684"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="42000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="699704"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="46000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="6791539"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="54000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="458654"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="61000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="770229"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="66000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="625988"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="68000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="576355"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="28000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="912034"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="70000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1068834"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="78000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="956418"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="45000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="13212044"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="031"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="11822237"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="86000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="417129"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="87000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="559417"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="11000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="776107"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="11100000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="31482"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="11001000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="744625"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="19000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="813562"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="27000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="790239"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="41000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1405924"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="47000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="608175"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="49000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="417250"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="58000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="409091"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="40000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="5625343"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="040"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="10507909"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="79000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="243306"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="85000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="125637"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="35000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="955729"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="03000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="3347381"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="12000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="604592"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="18000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1899920"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="60000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2813015"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="67000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="518329"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="038"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="5291768"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="82000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1466739"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="26000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="291948"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="83000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="468550"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="91000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="194132"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="90000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="429805"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="96000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="683537"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="07000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1757057"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="033"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="20633300"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="80000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2542057"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="88000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="462474"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="89000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="486559"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="92000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="3076265"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="94000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="940794"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="97000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="752786"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="57000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1888103"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="33000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="886735"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="22000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2441677"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="53000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1094209"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="56000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="849407"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="36000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2476366"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="63000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1832235"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="73000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="903633"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="034"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="10085024"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="37000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="483038"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="65000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="3627155"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="71000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="3177943"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="71100000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1635570"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="71140000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="442744"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="71001000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1099629"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="75000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2796888"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="041"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="12424025"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="84000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="64178"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="93000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="189123"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="95000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="362864"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="01000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1234995"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="04000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2269611"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="25000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1800195"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="32000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2196821"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="50000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2225545"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="52000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1339231"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="69000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="741462"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="042"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="5806552"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="81000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="573682"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="76000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="688073"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="98000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="679954"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="30000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="225938"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="05000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1414969"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="08000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1065505"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="10000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="513851"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="44000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="129308"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="64000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="379070"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="99000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="102900"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="1"/>
+			<generic:Value concept="s_OKATO" value="77000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="33302"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="643004.АГ"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="36473989"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="030"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="7158119"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="14000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="516776"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="15000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="343864"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="17000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="292397"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="20000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="714317"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="24000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="160870"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="29000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="269651"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="34000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="142911"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="38000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="328653"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="42000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="412576"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="46000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1921958"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="54000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="230680"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="61000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="308087"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="66000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="234554"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="68000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="375120"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="28000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="283126"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="70000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="395131"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="78000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="227448"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="031"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2036263"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="86000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="104274"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="87000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="158280"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="11000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="217646"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="11100000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="10583"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="11001000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="207063"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="19000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="304795"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="27000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="243170"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="41000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="641696"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="47000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="45726"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="49000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="151953"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="58000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="168723"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="040"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="6098666"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="79000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="257355"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="85000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="141542"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="35000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="950145"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="03000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2490239"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="12000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="341913"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="18000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="544052"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="60000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1331911"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="67000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="41509"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="038"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="4989241"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="82000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1779318"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="26000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="238908"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="83000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="438289"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="91000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="274328"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="90000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="249048"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="96000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="881172"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="07000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1128178"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="033"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="7841455"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="80000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="1511312"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="88000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="205554"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="89000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="275834"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="92000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="935046"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="94000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="490125"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="97000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="410629"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="57000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="601347"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="33000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="238438"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="22000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="608201"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="53000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="728568"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="56000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="382089"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="36000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="643838"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="63000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="545049"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="73000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="265425"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="034"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2187492"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="37000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="265696"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="65000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="594918"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="71000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="733305"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="71100000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="135014"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="71140000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="76789"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="71001000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="521502"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="75000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="593573"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="041"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="4105994"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="84000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="146252"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="93000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="148891"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="95000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="164002"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="01000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="872252"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="04000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="572443"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="25000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="526219"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="32000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="340631"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="50000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="562491"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="52000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="472719"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="69000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="300094"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="042"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="2056759"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="81000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="397848"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="76000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="296043"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="98000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="324158"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="30000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="62636"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="05000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="388057"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="08000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="210305"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="10000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="237713"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="44000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="4658"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="64000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="78524"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="99000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="42215"/>
+		</generic:Obs>
+	</generic:Series>
+	<generic:Series>
+		<generic:SeriesKey>
+			<generic:Value concept="s_kategnasel" value="2"/>
+			<generic:Value concept="s_OKATO" value="77000000000"/>
+		</generic:SeriesKey>
+		<generic:Attributes>
+			<generic:Value concept="EI" value="человек"/>
+			<generic:Value concept="PERIOD" value="значение показателя за год"/>
+		</generic:Attributes>
+		<generic:Obs>
+			<generic:Time>2024</generic:Time>
+			<generic:ObsValue value="14602"/>
+		</generic:Obs>
+	</generic:Series>
+</DataSet>
+</GenericData>

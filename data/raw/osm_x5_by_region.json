@@ -1,0 +1,506 @@
+{
+ "source": "OpenStreetMap (ODbL) via Overpass API; boundaries: geoBoundaries RUS ADM1 (ODbL)",
+ "fetched_at": "2026-11-24",
+ "total_shops": 20107,
+ "unmatched": 104,
+ "regions": {
+  "RU-ALT": {
+   "name": "Altai Krai",
+   "pyaterochka": 71,
+   "perekrestok": 11,
+   "chizhik": 9
+  },
+  "RU-MO": {
+   "name": "Republic of Mordovia",
+   "pyaterochka": 94,
+   "perekrestok": 3,
+   "chizhik": 1
+  },
+  "RU-TUL": {
+   "name": "Tula Oblast",
+   "pyaterochka": 304,
+   "perekrestok": 24,
+   "chizhik": 19
+  },
+  "RU-KGN": {
+   "name": "Kurgan Oblast",
+   "pyaterochka": 66,
+   "perekrestok": 1,
+   "chizhik": 0
+  },
+  "RU-IN": {
+   "name": "Ingushetia",
+   "pyaterochka": 0,
+   "perekrestok": 0,
+   "chizhik": 0
+  },
+  "RU-KHM": {
+   "name": "Khanty-Mansiysk Autonomous Okrug – Ugra",
+   "pyaterochka": 134,
+   "perekrestok": 18,
+   "chizhik": 0
+  },
+  "RU-KIR": {
+   "name": "Kirov Oblast",
+   "pyaterochka": 195,
+   "perekrestok": 7,
+   "chizhik": 1
+  },
+  "RU-KO": {
+   "name": "Komi Republic",
+   "pyaterochka": 127,
+   "perekrestok": 5,
+   "chizhik": 0
+  },
+  "RU-KOS": {
+   "name": "Kostroma Oblast",
+   "pyaterochka": 80,
+   "perekrestok": 2,
+   "chizhik": 4
+  },
+  "RU-KYA": {
+   "name": "Krasnoyarsk Krai",
+   "pyaterochka": 119,
+   "perekrestok": 7,
+   "chizhik": 0
+  },
+  "RU-ZAB": {
+   "name": "Zabaykalsky Krai",
+   "pyaterochka": 5,
+   "perekrestok": 0,
+   "chizhik": 0
+  },
+  "RU-SVE": {
+   "name": "Sverdlovsk Oblast",
+   "pyaterochka": 525,
+   "perekrestok": 38,
+   "chizhik": 40
+  },
+  "RU-VGG": {
+   "name": "Volgograd Oblast",
+   "pyaterochka": 162,
+   "perekrestok": 12,
+   "chizhik": 26
+  },
+  "RU-IRK": {
+   "name": "Irkutsk Oblast",
+   "pyaterochka": 43,
+   "perekrestok": 6,
+   "chizhik": 0
+  },
+  "RU-PER": {
+   "name": "Perm Krai",
+   "pyaterochka": 603,
+   "perekrestok": 13,
+   "chizhik": 38
+  },
+  "RU-PSK": {
+   "name": "Pskov Oblast",
+   "pyaterochka": 143,
+   "perekrestok": 2,
+   "chizhik": 0
+  },
+  "RU-ROS": {
+   "name": "Rostov Oblast",
+   "pyaterochka": 438,
+   "perekrestok": 20,
+   "chizhik": 19
+  },
+  "RU-RYA": {
+   "name": "Ryazan Oblast",
+   "pyaterochka": 182,
+   "perekrestok": 8,
+   "chizhik": 7
+  },
+  "RU-AD": {
+   "name": "Adygea",
+   "pyaterochka": 92,
+   "perekrestok": 3,
+   "chizhik": 1
+  },
+  "RU-SAM": {
+   "name": "Samara Oblast",
+   "pyaterochka": 693,
+   "perekrestok": 36,
+   "chizhik": 18
+  },
+  "RU-KK": {
+   "name": "Khakassia",
+   "pyaterochka": 66,
+   "perekrestok": 6,
+   "chizhik": 0
+  },
+  "RU-TAM": {
+   "name": "Tambov Oblast",
+   "pyaterochka": 211,
+   "perekrestok": 2,
+   "chizhik": 8
+  },
+  "RU-TA": {
+   "name": "Tatarstan",
+   "pyaterochka": 916,
+   "perekrestok": 18,
+   "chizhik": 47
+  },
+  "RU-TOM": {
+   "name": "Tomsk Oblast",
+   "pyaterochka": 55,
+   "perekrestok": 3,
+   "chizhik": 13
+  },
+  "RU-NIZ": {
+   "name": "Nizhny Novgorod Oblast",
+   "pyaterochka": 728,
+   "perekrestok": 28,
+   "chizhik": 46
+  },
+  "RU-KR": {
+   "name": "Republic of Karelia",
+   "pyaterochka": 138,
+   "perekrestok": 4,
+   "chizhik": 0
+  },
+  "RU-ARK": {
+   "name": "Arkhangelsk Oblast",
+   "pyaterochka": 154,
+   "perekrestok": 5,
+   "chizhik": 0
+  },
+  "RU-AST": {
+   "name": "Astrakhan Oblast",
+   "pyaterochka": 42,
+   "perekrestok": 1,
+   "chizhik": 0
+  },
+  "RU-BEL": {
+   "name": "Belgorod Oblast",
+   "pyaterochka": 135,
+   "perekrestok": 6,
+   "chizhik": 0
+  },
+  "RU-BRY": {
+   "name": "Bryansk Oblast",
+   "pyaterochka": 220,
+   "perekrestok": 6,
+   "chizhik": 0
+  },
+  "RU-BU": {
+   "name": "Buryatia",
+   "pyaterochka": 2,
+   "perekrestok": 0,
+   "chizhik": 0
+  },
+  "RU-CE": {
+   "name": "Chechnya",
+   "pyaterochka": 0,
+   "perekrestok": 0,
+   "chizhik": 0
+  },
+  "RU-CHE": {
+   "name": "Chelyabinsk Oblast",
+   "pyaterochka": 456,
+   "perekrestok": 18,
+   "chizhik": 81
+  },
+  "RU-CU": {
+   "name": "Chuvashia",
+   "pyaterochka": 189,
+   "perekrestok": 5,
+   "chizhik": 12
+  },
+  "RU-TYU": {
+   "name": "Tyumen Oblast",
+   "pyaterochka": 153,
+   "perekrestok": 12,
+   "chizhik": 9
+  },
+  "RU-SE": {
+   "name": "North Ossetia–Alania",
+   "pyaterochka": 9,
+   "perekrestok": 1,
+   "chizhik": 0
+  },
+  "RU-PNZ": {
+   "name": "Penza Oblast",
+   "pyaterochka": 167,
+   "perekrestok": 3,
+   "chizhik": 2
+  },
+  "RU-AMU": {
+   "name": "Amur Oblast",
+   "pyaterochka": 3,
+   "perekrestok": 3,
+   "chizhik": 0
+  },
+  "RU-KB": {
+   "name": "Kabardino-Balkaria",
+   "pyaterochka": 19,
+   "perekrestok": 0,
+   "chizhik": 0
+  },
+  "RU-KDA": {
+   "name": "Krasnodar Krai",
+   "pyaterochka": 598,
+   "perekrestok": 41,
+   "chizhik": 29
+  },
+  "RU-KRS": {
+   "name": "Kursk Oblast",
+   "pyaterochka": 209,
+   "perekrestok": 2,
+   "chizhik": 7
+  },
+  "RU-LEN": {
+   "name": "Leningrad oblast",
+   "pyaterochka": 509,
+   "perekrestok": 17,
+   "chizhik": 1
+  },
+  "RU-ME": {
+   "name": "Mari El",
+   "pyaterochka": 108,
+   "perekrestok": 4,
+   "chizhik": 12
+  },
+  "RU-MOW": {
+   "name": "Moscow",
+   "pyaterochka": 1408,
+   "perekrestok": 326,
+   "chizhik": 140
+  },
+  "RU-MOS": {
+   "name": "Moscow Oblast",
+   "pyaterochka": 1732,
+   "perekrestok": 165,
+   "chizhik": 199
+  },
+  "RU-MUR": {
+   "name": "Murmansk Oblast",
+   "pyaterochka": 160,
+   "perekrestok": 9,
+   "chizhik": 0
+  },
+  "RU-NEN": {
+   "name": "Nenets Autonomous Okrug",
+   "pyaterochka": 0,
+   "perekrestok": 1,
+   "chizhik": 0
+  },
+  "RU-NGR": {
+   "name": "Novgorod Oblast",
+   "pyaterochka": 115,
+   "perekrestok": 1,
+   "chizhik": 0
+  },
+  "RU-NVS": {
+   "name": "Novosibirsk Oblast",
+   "pyaterochka": 170,
+   "perekrestok": 3,
+   "chizhik": 15
+  },
+  "RU-OMS": {
+   "name": "Omsk Oblast",
+   "pyaterochka": 217,
+   "perekrestok": 2,
+   "chizhik": 0
+  },
+  "RU-ORL": {
+   "name": "Oryol Oblast",
+   "pyaterochka": 119,
+   "perekrestok": 7,
+   "chizhik": 0
+  },
+  "RU-SPE": {
+   "name": "Saint Petersburg",
+   "pyaterochka": 542,
+   "perekrestok": 126,
+   "chizhik": 0
+  },
+  "RU-SAK": {
+   "name": "Sakhalin Oblast",
+   "pyaterochka": 1,
+   "perekrestok": 6,
+   "chizhik": 0
+  },
+  "RU-SA": {
+   "name": "Sakha Republic",
+   "pyaterochka": 7,
+   "perekrestok": 1,
+   "chizhik": 0
+  },
+  "RU-SAR": {
+   "name": "Saratov Oblast",
+   "pyaterochka": 151,
+   "perekrestok": 10,
+   "chizhik": 15
+  },
+  "RU-SMO": {
+   "name": "Smolensk Oblast",
+   "pyaterochka": 121,
+   "perekrestok": 4,
+   "chizhik": 0
+  },
+  "RU-STA": {
+   "name": "Stavropol Krai",
+   "pyaterochka": 184,
+   "perekrestok": 12,
+   "chizhik": 2
+  },
+  "RU-TY": {
+   "name": "Tuva",
+   "pyaterochka": 1,
+   "perekrestok": 0,
+   "chizhik": 0
+  },
+  "RU-TVE": {
+   "name": "Tver Oblast",
+   "pyaterochka": 277,
+   "perekrestok": 7,
+   "chizhik": 28
+  },
+  "RU-UD": {
+   "name": "Udmurtia",
+   "pyaterochka": 271,
+   "perekrestok": 7,
+   "chizhik": 14
+  },
+  "RU-KLU": {
+   "name": "Kaluga Oblast",
+   "pyaterochka": 234,
+   "perekrestok": 6,
+   "chizhik": 1
+  },
+  "RU-LIP": {
+   "name": "Lipetsk Oblast",
+   "pyaterochka": 290,
+   "perekrestok": 10,
+   "chizhik": 12
+  },
+  "RU-MAG": {
+   "name": "Magadan Oblast",
+   "pyaterochka": 0,
+   "perekrestok": 2,
+   "chizhik": 0
+  },
+  "RU-ULY": {
+   "name": "Ulyanovsk Oblast",
+   "pyaterochka": 196,
+   "perekrestok": 5,
+   "chizhik": 7
+  },
+  "RU-VLA": {
+   "name": "Vladimir Oblast",
+   "pyaterochka": 301,
+   "perekrestok": 9,
+   "chizhik": 13
+  },
+  "RU-VLG": {
+   "name": "Vologda Oblast",
+   "pyaterochka": 222,
+   "perekrestok": 4,
+   "chizhik": 6
+  },
+  "RU-YAR": {
+   "name": "Yaroslavl Oblast",
+   "pyaterochka": 284,
+   "perekrestok": 11,
+   "chizhik": 12
+  },
+  "RU-VOR": {
+   "name": "Voronezh Oblast",
+   "pyaterochka": 304,
+   "perekrestok": 26,
+   "chizhik": 17
+  },
+  "RU-YAN": {
+   "name": "Yamalo-Nenets Autonomous Okrug",
+   "pyaterochka": 49,
+   "perekrestok": 1,
+   "chizhik": 0
+  },
+  "RU-AL": {
+   "name": "Altai Republic",
+   "pyaterochka": 10,
+   "perekrestok": 1,
+   "chizhik": 0
+  },
+  "RU-IVA": {
+   "name": "Ivanovo Oblast",
+   "pyaterochka": 173,
+   "perekrestok": 3,
+   "chizhik": 3
+  },
+  "RU-YEV": {
+   "name": "Jewish Autonomous Oblast",
+   "pyaterochka": 2,
+   "perekrestok": 0,
+   "chizhik": 0
+  },
+  "RU-KL": {
+   "name": "Kalmykia",
+   "pyaterochka": 12,
+   "perekrestok": 1,
+   "chizhik": 0
+  },
+  "RU-KAM": {
+   "name": "Kamchatka Krai",
+   "pyaterochka": 0,
+   "perekrestok": 4,
+   "chizhik": 0
+  },
+  "RU-KC": {
+   "name": "Karachay-Cherkessia",
+   "pyaterochka": 10,
+   "perekrestok": 1,
+   "chizhik": 0
+  },
+  "RU-KEM": {
+   "name": "Kemerovo Oblast",
+   "pyaterochka": 61,
+   "perekrestok": 1,
+   "chizhik": 6
+  },
+  "RU-KHA": {
+   "name": "Khabarovsk Krai",
+   "pyaterochka": 53,
+   "perekrestok": 2,
+   "chizhik": 0
+  },
+  "RU-CHU": {
+   "name": "Chukotka Autonomous Okrug",
+   "pyaterochka": 1,
+   "perekrestok": 0,
+   "chizhik": 0
+  },
+  "RU-DA": {
+   "name": "Dagestan",
+   "pyaterochka": 6,
+   "perekrestok": 2,
+   "chizhik": 0
+  },
+  "RU-KGD": {
+   "name": "Kaliningrad",
+   "pyaterochka": 85,
+   "perekrestok": 2,
+   "chizhik": 0
+  },
+  "RU-ORE": {
+   "name": "Orenburg Oblast",
+   "pyaterochka": 190,
+   "perekrestok": 6,
+   "chizhik": 0
+  },
+  "RU-PRI": {
+   "name": "Primorsky Krai",
+   "pyaterochka": 45,
+   "perekrestok": 7,
+   "chizhik": 0
+  },
+  "RU-BA": {
+   "name": "Bashkortostan",
+   "pyaterochka": 653,
+   "perekrestok": 18,
+   "chizhik": 33
+  }
+ }
+}

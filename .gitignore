@@ -6,3 +6,9 @@ dist/
 BRIEF.md
 widget/
 .superpowers/
+# копии чужих страниц/PDF и крупные производные — скачиваются скриптами заново
+data/raw/*.pdf
+data/raw/*.html
+data/raw/geoboundaries_*.geojson
+__pycache__/
+.pytest_cache/

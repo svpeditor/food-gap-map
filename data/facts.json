@@ -1,0 +1,153 @@
+{
+ "programs": {
+  "korzina": {
+   "program": "«Корзина доброты» («Пятёрочка», фонд «Выручаем», банк еды «Русь»)",
+   "kind": "собрано покупателями",
+   "period": "1 полугодие 2025",
+   "total_kg": 429000,
+   "url": "https://esg.x5.ru/media/pdfs/080825_ru.pdf"
+  },
+  "foodsharing": {
+   "program": "Фудшеринг «Пятёрочки» (банк еды «Русь», АНО «Фудшеринг»)",
+   "kind": "передано нуждающимся",
+   "period": "1 полугодие 2025",
+   "total_kg": 195000,
+   "url": "https://esg.x5.ru/media/pdfs/250807-pyatyorochka-vtroe-uvelichila-obyomyi-pomoschi-po-fudsheringu_ru.pdf",
+   "note_kg": "в релизе в тоннах; для Краснодара «более 4,5 т»"
+  }
+ },
+ "facts": [
+  {
+   "iso": "RU-VOR",
+   "city": "Воронеж",
+   "kg": 22862,
+   "program": "korzina"
+  },
+  {
+   "iso": "RU-SPE",
+   "city": "Санкт-Петербург",
+   "kg": 20654,
+   "program": "korzina"
+  },
+  {
+   "iso": "RU-MOW",
+   "city": "Москва",
+   "kg": 16098,
+   "program": "korzina"
+  },
+  {
+   "iso": "RU-TUL",
+   "city": "Тула",
+   "kg": 15231,
+   "program": "korzina"
+  },
+  {
+   "iso": "RU-UD",
+   "city": "Ижевск",
+   "kg": 14806,
+   "program": "korzina"
+  },
+  {
+   "iso": "RU-NIZ",
+   "city": "Нижний Новгород",
+   "kg": 10148,
+   "program": "korzina"
+  },
+  {
+   "iso": "RU-SVE",
+   "city": "Екатеринбург",
+   "kg": 8031,
+   "program": "korzina"
+  },
+  {
+   "iso": "RU-TA",
+   "city": "Казань",
+   "kg": 6324,
+   "program": "korzina"
+  },
+  {
+   "iso": "RU-KDA",
+   "city": "Краснодар",
+   "kg": 4206,
+   "program": "korzina"
+  },
+  {
+   "iso": "RU-ROS",
+   "city": "Ростов-на-Дону",
+   "kg": 3670,
+   "program": "korzina"
+  },
+  {
+   "iso": "RU-PRI",
+   "city": "Владивосток",
+   "kg": 698,
+   "program": "korzina"
+  },
+  {
+   "iso": "RU-NVS",
+   "city": "Новосибирск",
+   "kg": 198,
+   "program": "korzina"
+  },
+  {
+   "iso": "RU-MUR",
+   "city": "Мурманск",
+   "kg": 111000,
+   "program": "foodsharing"
+  },
+  {
+   "iso": "RU-MOW",
+   "city": "Москва (с дарксторами)",
+   "kg": 63000,
+   "program": "foodsharing"
+  },
+  {
+   "iso": "RU-CHE",
+   "city": "Челябинск",
+   "kg": 8500,
+   "program": "foodsharing"
+  },
+  {
+   "iso": "RU-RYA",
+   "city": "Рязань",
+   "kg": 6000,
+   "program": "foodsharing"
+  },
+  {
+   "iso": "RU-KDA",
+   "city": "Краснодар",
+   "kg": 4500,
+   "program": "foodsharing"
+  }
+ ],
+ "quotes": {
+  "msu": {
+   "url": "https://esg.x5.ru/media/pdfs/040626_ru.pdf",
+   "text": "увеличение объема продуктовой помощи на 1 кг в расчёте на душу населения в год способствуют снижению уровня бедности на 20,55% при прочих равных условиях"
+  },
+  "vat": {
+   "url": "https://esg.x5.ru/media/pdfs/040626_ru.pdf",
+   "text": "принятие законопроекта об освобождении фудшеринга от НДС увеличит объемы помощи как минимум на 40%"
+  },
+  "vat_cost": {
+   "url": "https://esg.x5.ru/media/pdfs/040626_ru.pdf",
+   "text": "бизнес несет «альтернативные издержки» в размере от 8 до 16 рублей на каждые 100 рублей переданной продукции"
+  },
+  "platform": {
+   "url": "https://www.retail.ru/news/x5-zapustila-platformu-prodovolstvennoy-pomoshchi-11-dekabrya-2025-272425/",
+   "text": "«Выручаем» может направлять помощь точечно в те регионы, где она была собрана"
+  },
+  "volume_2024": {
+   "url": "https://esg.x5.ru/media/pdfs/28025_ru.pdf",
+   "text": "С января по декабрь удалось передать свыше 1,1 тыс. тонн продуктов питания для 570 тыс. нуждающихся"
+  },
+  "price_kg": {
+   "url": "https://esg.x5.ru/media/pdfs/100826_ru.pdf",
+   "text": "передать нуждающимся более 52 тонн продуктов на сумму около 12 миллионов рублей"
+  },
+  "x5_stores": {
+   "url": "https://www.retail.ru/news/x5-uvelichila-godovuyu-vyruchku-na-18-8-28-yanvarya-2026-273860/",
+   "text": "Общее количество магазинов под управлением X5 к концу декабря достигло 29 790 … «Чижик» … 3 253. Количество магазинов «Пятёрочки» выросло на 8,2% до 25 533, а «Перекрёстка» — на 1,8% до 1 004"
+  }
+ }
+}
