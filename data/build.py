@@ -24,6 +24,44 @@ FD = {
     "ПФО": "Приволжский", "УФО": "Уральский", "СФО": "Сибирский", "ДФО": "Дальневосточный",
 }
 X5_OFFICIAL = {"pyaterochka": 25533, "perekrestok": 1004, "chizhik": 3253}  # на 31.12.2025, см. facts.json quotes.x5_stores
+# Магазины X5 по федеральным округам на 31.12.2025, https://x5.ru/ru/about/where-we-operate/
+# Доля региона считается по точкам OSM внутри своего округа и сети, поэтому неполнота OSM
+# в Сибири и на Дальнем Востоке не переносит магазины в европейскую часть.
+X5_BY_FD = {
+    "ЦФО": {"pyaterochka": 8216, "perekrestok": 571, "chizhik": 1141},
+    "ПФО": {"pyaterochka": 6006, "perekrestok": 125, "chizhik": 861},
+    "СЗФО": {"pyaterochka": 2512, "perekrestok": 160, "chizhik": 11},
+    "УФО": {"pyaterochka": 2284, "perekrestok": 68, "chizhik": 392},
+    "ЮФО": {"pyaterochka": 3027, "perekrestok": 71, "chizhik": 535},
+    "СФО": {"pyaterochka": 2351, "perekrestok": 0, "chizhik": 270},
+    "СКФО": {"pyaterochka": 579, "perekrestok": 9, "chizhik": 43},
+    "ДФО": {"pyaterochka": 558, "perekrestok": 0, "chizhik": 0},
+}
+X5_REGIONS_OFFICIAL = 75  # «75 регионов присутствия», там же
+# Где X5 публиковала число магазинов по регионам округа, доля региона берётся оттуда, а не из OSM
+# (на Дальнем Востоке OSM сильно отстаёт от открытий). Итог округа остаётся на 31.12.2025.
+X5_FD_REGIONAL = {
+    "ДФО": {
+        "brand": "pyaterochka",
+        "date": "09.2026",
+        "sources": [
+            "https://eastrussia.ru/material/tri-goda-na-dalnem-vostoke-kak-pyatyerochka-izmenila-produktovyy-riteyl-i-infrastrukturu-regiona/",
+            "https://www.retail.ru/news/x5-vyydet-v-buryatiyu-i-na-kamchatskiy-kray-4-sentyabrya-2026-281748/",
+        ],
+        # «более 640 магазинов»: Хабаровский 197, Приморский «более 167», Забайкальский 150, Амурская 38, ЕАО 19;
+        # Бурятия 57 (retail.ru); Якутия — остаток до 640.
+        "stores": {"RU-KHA": 197, "RU-PRI": 167, "RU-ZAB": 150, "RU-AMU": 38, "RU-YEV": 19, "RU-BU": 57, "RU-SA": 12},
+    },
+}
+# Регионы, куда X5 по своим новостям не выходила (переговоры и планы, без открытий):
+# точки OSM с названиями сетей там — одноимённые местные магазины.
+X5_ABSENT = {
+    "RU-CHU": "переговоры об открытии в Анадыре, 09.2025",
+    "RU-KAM": "соглашение о сотрудничестве на ВЭФ, 09.2026",
+    "RU-MAG": "X5 «рассматривает» выход, 09.2024",
+    "RU-SAK": "выход назван перспективой, 2023",
+    "RU-NEN": "сведений о выходе нет",
+}
 PARAMS = {
     "msu_coef": 0.2055,          # −20,55 % бедности на +1 кг/душу/год (фонд «Выручаем» и МГУ, 2026)
     "vat_growth_min": 0.40,      # «как минимум на 40%» при освобождении от НДС
@@ -65,13 +103,32 @@ def basket() -> tuple[dict[str, float], dict[str, dict]]:
     return avg2025, latest
 
 
-def stores() -> dict[str, dict[str, float]]:
+def stores(fd_of: dict[str, str]) -> dict[str, dict[str, float]]:
+    """Оценка магазинов X5 по регионам: доля точек OSM внутри федерального округа × официальный итог округа."""
     osm = json.loads((RAW / "osm_x5_by_region.json").read_text())["regions"]
-    totals = {b: sum(c[b] for c in osm.values()) for b in X5_OFFICIAL}
+    used = {iso: {b: (0 if iso in X5_ABSENT else c[b]) for b in X5_OFFICIAL} for iso, c in osm.items() if iso in fd_of}
+    fd_osm: dict[str, dict[str, int]] = {}
+    for iso, c in used.items():
+        acc = fd_osm.setdefault(fd_of[iso], {b: 0 for b in X5_OFFICIAL})
+        for b in X5_OFFICIAL:
+            acc[b] += c[b]
+    for fd, official in X5_BY_FD.items():
+        for b, n in official.items():
+            if n > 0 and fd_osm.get(fd, {}).get(b, 0) == 0:
+                raise SystemExit(f"нет точек OSM для {b} в {fd}, а у X5 там {n} магазинов")
     est = {}
     for iso, c in osm.items():
-        est[iso] = {b: c[b] / totals[b] * X5_OFFICIAL[b] for b in X5_OFFICIAL}
+        if iso not in fd_of:
+            continue
+        fd = fd_of[iso]
+        est[iso] = {b: (used[iso][b] / fd_osm[fd][b] * X5_BY_FD[fd][b] if X5_BY_FD[fd][b] else 0.0) for b in X5_OFFICIAL}
         est[iso]["_osm"] = {b: c[b] for b in X5_OFFICIAL}
+    for fd, spec in X5_FD_REGIONAL.items():
+        b, known = spec["brand"], spec["stores"]
+        total = sum(known.values())
+        for iso in est:
+            if fd_of[iso] == fd:
+                est[iso][b] = known.get(iso, 0) / total * X5_BY_FD[fd][b]
     return est
 
 
@@ -79,7 +136,9 @@ def main() -> dict:
     pov, okato_names = poverty()
     pop = population()
     bsk, bsk_latest = basket()
-    st = stores()
+    with open(HERE / "regions.csv", encoding="utf-8") as fh:
+        fd_of = {row["iso"]: row["fd"] for row in csv.DictReader(fh)}
+    st = stores(fd_of)
     facts = json.loads((HERE / "facts.json").read_text())
     zero = {b: 0.0 for b in X5_OFFICIAL}
 
@@ -109,6 +168,7 @@ def main() -> dict:
                 "stores_by_brand": by_brand,
                 "stores_osm": s["_osm"],
                 "stores_est": sum(by_brand.values()),
+                **({"x5_absent": X5_ABSENT[row["iso"]]} if row["iso"] in X5_ABSENT else {}),
                 "facts": [
                     {**f, **{k: facts["programs"][f["program"]][k] for k in ("program", "kind", "period", "url")}}
                     for f in facts["facts"] if f["iso"] == row["iso"]
@@ -121,6 +181,10 @@ def main() -> dict:
             "built_at": time.strftime("%Y-%m-%d"),
             "params": PARAMS,
             "x5_stores_official": X5_OFFICIAL,
+            "x5_stores_by_fd": X5_BY_FD,
+            "x5_regions_official": X5_REGIONS_OFFICIAL,
+            "x5_fd_regional": X5_FD_REGIONAL,
+            "x5_absent": X5_ABSENT,
             "osm": {"fetched_at": osm_meta["fetched_at"], "total_shops": osm_meta["total_shops"], "unmatched": osm_meta["unmatched"]},
             "years": {"poverty": "2025", "population": "2024 (среднегодовая)", "basket": "2025 (среднее за 12 месяцев)"},
             "quotes": facts["quotes"],

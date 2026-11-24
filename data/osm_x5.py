@@ -29,6 +29,17 @@ BRANDS = {
     "perekrestok": re.compile(r"^Перекр[её]сток", re.I),
     "chizhik": re.compile(r"^Чижик", re.I),
 }
+# С 3 кв. 2025 X5 учитывает сибирские сети «Красный Яр» и «Слата» в составе «Пятёрочки»
+# (x5.ru/ru/about/where-we-operate), поэтому их точки считаются отдельным запросом и идут в «Пятёрочку».
+ACQUIRED = {"Красный Яр": "krasny_yar", "Слата": "slata"}
+QUERY_ACQUIRED = """[out:json][timeout:600];
+(
+  nwr["name"="Красный Яр"]["shop"~"^(supermarket|convenience|grocery|food)$"];
+  nwr["brand"="Красный Яр"]["shop"];
+  nwr["name"="Слата"]["shop"~"^(supermarket|convenience|grocery|food)$"];
+  nwr["brand"="Слата"]["shop"];
+);
+out center tags;"""
 QUERY = """[out:json][timeout:900];
 (
   nwr["name"="Пятёрочка"]["shop"];
@@ -45,25 +56,45 @@ QUERY = """[out:json][timeout:900];
 out center tags;"""
 
 
+def overpass(query: str, rounds: int = 3) -> list[dict]:
+    for attempt in range(rounds):
+        for url, use_proxy in ENDPOINTS:
+            op = urllib.request.build_opener(*([] if use_proxy else [urllib.request.ProxyHandler({})]))
+            req = urllib.request.Request(url, data=urllib.parse.urlencode({"data": query}).encode(), headers={"User-Agent": "food-gap-map/0.1 (open data research)"})
+            t0 = time.time()
+            try:
+                with op.open(req, timeout=1200) as r:
+                    els = json.loads(r.read())["elements"]
+            except Exception as e:  # noqa: BLE001
+                print(url, "failed:", repr(e)[:200], file=sys.stderr)
+                continue
+            print(url, len(els), "elements,", round(time.time() - t0), "s", file=sys.stderr)
+            return els
+        time.sleep(30 * (attempt + 1))
+    raise SystemExit("overpass: all endpoints failed")
+
+
+def fetch_acquired() -> list[dict]:
+    path = RAW / "osm_x5_acquired.json"
+    if path.exists():
+        return json.loads(path.read_text())["shops"]
+    shops = []
+    for e in overpass(QUERY_ACQUIRED):
+        tags = e.get("tags", {})
+        chain = ACQUIRED.get(tags.get("brand") or "") or ACQUIRED.get(tags.get("name") or "")
+        lat = e.get("lat", e.get("center", {}).get("lat"))
+        lon = e.get("lon", e.get("center", {}).get("lon"))
+        if chain and lat is not None:
+            shops.append({"id": f"{e['type'][0]}{e['id']}", "brand": "pyaterochka", "chain": chain, "lat": round(lat, 5), "lon": round(lon, 5)})
+    path.write_text(json.dumps({"source": "OpenStreetMap via Overpass API (ODbL)", "fetched_at": time.strftime("%Y-%m-%d"), "query": QUERY_ACQUIRED, "shops": shops}, ensure_ascii=False))
+    return shops
+
+
 def fetch_shops() -> list[dict]:
     path = RAW / "osm_x5_shops.json"
     if path.exists():
         return json.loads(path.read_text())["shops"]
-    els = None
-    for url, use_proxy in ENDPOINTS:
-        op = urllib.request.build_opener(*([] if use_proxy else [urllib.request.ProxyHandler({})]))
-        req = urllib.request.Request(url, data=urllib.parse.urlencode({"data": QUERY}).encode(), headers={"User-Agent": "food-gap-map/0.1 (open data research)"})
-        t0 = time.time()
-        try:
-            with op.open(req, timeout=1200) as r:
-                els = json.loads(r.read())["elements"]
-        except Exception as e:  # noqa: BLE001
-            print(url, "failed:", repr(e)[:200], file=sys.stderr)
-            continue
-        print(url, len(els), "elements,", round(time.time() - t0), "s", file=sys.stderr)
-        break
-    if els is None:
-        raise SystemExit("overpass: all endpoints failed")
+    els = overpass(QUERY)
     shops = []
     for e in els:
         tags = e.get("tags", {})
@@ -131,7 +162,7 @@ def locate(shops: list[dict], fc: dict) -> dict[str, dict]:
 
 
 if __name__ == "__main__":
-    shops = fetch_shops()
+    shops = fetch_shops() + fetch_acquired()
     fc = fetch_boundaries()
     counts, unmatched = locate(shops, fc)
     out = {

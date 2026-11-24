@@ -1,8 +1,8 @@
 {
  "source": "OpenStreetMap (ODbL) via Overpass API; boundaries: geoBoundaries RUS ADM1 (ODbL)",
  "fetched_at": "2026-11-24",
- "total_shops": 20107,
- "unmatched": 104,
+ "total_shops": 20229,
+ "unmatched": 106,
  "regions": {
   "RU-ALT": {
    "name": "Altai Krai",
@@ -60,7 +60,7 @@
   },
   "RU-KYA": {
    "name": "Krasnoyarsk Krai",
-   "pyaterochka": 119,
+   "pyaterochka": 176,
    "perekrestok": 7,
    "chizhik": 0
   },
@@ -84,7 +84,7 @@
   },
   "RU-IRK": {
    "name": "Irkutsk Oblast",
-   "pyaterochka": 43,
+   "pyaterochka": 104,
    "perekrestok": 6,
    "chizhik": 0
   },
@@ -126,7 +126,7 @@
   },
   "RU-KK": {
    "name": "Khakassia",
-   "pyaterochka": 66,
+   "pyaterochka": 68,
    "perekrestok": 6,
    "chizhik": 0
   },

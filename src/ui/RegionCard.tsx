@@ -65,9 +65,9 @@ export function RegionCard({ ds, region: r, ctx, rank, usingUpload, onClose }: P
           </dd>
         </div>
         <div>
-          <dt>Магазины X5, оценка</dt>
+          <dt>Магазины X5 на конец 2025 года, оценка</dt>
           <dd>
-            {r.stores_est < 1 ? 'нет' : '≈ ' + fmtInt(r.stores_est)}{' '}
+            {r.x5_absent ? 'нет, X5 здесь пока не работает' : r.stores_est < 1 ? 'нет' : '≈ ' + fmtInt(r.stores_est)}{' '}
             {r.stores_est >= 1 && (
               <span className="muted">
                 «Пятёрочка» {fmtInt(brands.pyaterochka)}, «Перекрёсток» {fmtInt(brands.perekrestok)}, «Чижик» {fmtInt(brands.chizhik)}

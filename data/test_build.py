@@ -44,6 +44,32 @@ def test_stores_scaled_to_official_totals(ds):
         assert r["stores_est"] == pytest.approx(sum(r["stores_by_brand"].values()), abs=1e-6)
 
 
+def test_stores_match_official_federal_districts(ds):
+    by_fd = ds["meta"]["x5_stores_by_fd"]
+    fd_code = {v: k for k, v in build.FD.items()}
+    for fd, official in by_fd.items():
+        for brand, n in official.items():
+            total = sum(r["stores_by_brand"][brand] for r in ds["regions"] if fd_code[r["fd"]] == fd)
+            assert total == pytest.approx(n, abs=1.0), (fd, brand)
+
+
+def test_x5_presence_matches_official_region_count(ds):
+    for r in ds["regions"]:
+        if r["iso"] in ds["meta"]["x5_absent"]:
+            assert r["stores_est"] == 0, r["iso"]
+    present = sum(1 for r in ds["regions"] if r["stores_est"] > 0.5)
+    # X5: 75 регионов присутствия; лишний у нас — Дагестан, где в OSM есть точки «Пятёрочки»
+    assert abs(present - ds["meta"]["x5_regions_official"]) <= 1
+
+
+def test_far_east_uses_published_regional_counts(ds):
+    spec = ds["meta"]["x5_fd_regional"]["ДФО"]
+    known = spec["stores"]
+    by = {r["iso"]: r["stores_by_brand"]["pyaterochka"] for r in ds["regions"]}
+    assert by["RU-KHA"] / by["RU-BU"] == pytest.approx(known["RU-KHA"] / known["RU-BU"], rel=1e-9)
+    assert by["RU-KAM"] == 0 and by["RU-CHU"] == 0
+
+
 def test_russia_totals(ds):
     ru = ds["russia"]
     assert 5 < ru["poverty_rate"] < 12

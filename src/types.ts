@@ -27,6 +27,8 @@ export interface Region {
   stores_by_brand: Record<Brand, number>
   stores_osm: Record<Brand, number>
   stores_est: number
+  /** X5 в регионе не работает: почему точки OSM не считаются */
+  x5_absent?: string
   facts: Fact[]
 }
 
@@ -48,6 +50,10 @@ export interface Dataset {
     built_at: string
     params: Params
     x5_stores_official: Record<Brand, number>
+    x5_stores_by_fd: Record<string, Record<Brand, number>>
+    x5_regions_official: number
+    x5_fd_regional: Record<string, { brand: Brand; date: string; sources: string[]; stores: Record<string, number> }>
+    x5_absent: Record<string, string>
     osm: { fetched_at: string; total_shops: number; unmatched: number }
     years: { poverty: string; population: string; basket: string }
     quotes: Record<string, Quote>

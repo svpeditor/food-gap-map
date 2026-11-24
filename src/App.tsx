@@ -75,13 +75,14 @@ function Main({ ds }: { ds: Dataset }) {
     const totalStores = regions.reduce((s, r) => s + r.stores_est, 0)
     const poorest = [...regions].sort((a, b) => b.poverty_rate - a.poverty_rate).slice(0, 10)
     const storesPoorest = poorest.reduce((s, r) => s + r.stores_est, 0)
+    const poorInPoorest = poorest.reduce((s, r) => s + r.poor, 0)
     const noStores = poorest.filter((r) => r.stores_est < 1).map((r) => r.short)
     const under = gaps.filter((g) => g.gap < 0.5)
     const underPoor = under.reduce((s, g) => s + g.region.poor, 0)
     const totalKg = regions.reduce((s, r) => s + (aid[r.iso] ?? 0), 0)
     const now = regions.reduce((s, r) => s + lifted(r, aid[r.iso] ?? 0, p.msu_coef), 0)
     const byNeed = regions.reduce((s, r) => s + lifted(r, (totalKg * r.poor) / totalPoor, p.msu_coef), 0)
-    return { totalPoor, totalStores, poorest, storesPoorest, noStores, under, underPoor, ratio: now > 0 ? byNeed / now : 0 }
+    return { totalPoor, totalStores, poorest, storesPoorest, poorInPoorest, noStores, under, underPoor, ratio: now > 0 ? byNeed / now : 0 }
   }, [regions, gaps, aid, p.msu_coef])
 
   return (
@@ -121,8 +122,8 @@ function Main({ ds }: { ds: Dataset }) {
             </p>
             <ul className="findings">
               <li>
-                В десяти регионах с самой высокой долей бедных около <b>{fmtInt(f.storesPoorest)}</b> магазинов X5, это{' '}
-                {fmtNum((f.storesPoorest / f.totalStores) * 100, 1)} % сети.
+                В десяти регионах с самой высокой долей бедных живёт {fmtNum((f.poorInPoorest / f.totalPoor) * 100, 0)} % малоимущих страны, а магазинов X5
+                там около <b>{fmtInt(f.storesPoorest)}</b>, это {fmtNum((f.storesPoorest / f.totalStores) * 100, 1)} % сети.
                 {f.noStores.length > 0 && ' ' + f.noStores.join(' и ') + ': ни одного.'}
               </li>
               <li>

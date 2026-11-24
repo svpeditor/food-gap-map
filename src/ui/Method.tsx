@@ -1,11 +1,14 @@
 import type { Dataset } from '../types'
-import { fmtInt, fmtNum } from '../format'
+import { fmtInt, fmtNum, fmtPeople } from '../format'
 
 export function Method({ ds }: { ds: Dataset }) {
   const q = ds.meta.quotes
   const p = ds.meta.params
   const o = ds.meta.x5_stores_official
   const osmTotal = ds.regions.reduce((s, r) => s + r.stores_osm.pyaterochka + r.stores_osm.perekrestok + r.stores_osm.chizhik, 0)
+  const absent = ds.regions.filter((r) => r.x5_absent).map((r) => r.short)
+  const present = ds.regions.filter((r) => r.stores_est >= 0.5).length
+  const fe = ds.meta.x5_fd_regional['ДФО']
   return (
     <div className="method">
       <div className="method-cols">
@@ -25,6 +28,11 @@ export function Method({ ds }: { ds: Dataset }) {
             Исследование фонда «Выручаем» и экономического факультета МГУ (данные Росстата по 81 региону за 30 лет): «{q.msu.text}». Мы используем этот
             коэффициент как полуэластичность: число малоимущих × (1 − e<sup>−{fmtNum(p.msu_coef, 4)} × кг на душу</sup>). На реальных объёмах это почти
             линейно: один килограмм даёт эффект, пропорциональный доле бедных в регионе.
+          </p>
+          <p>
+            Мы читаем 20,55 % как относительное снижение доли бедных, а не как процентные пункты. При прочтении в пунктах каждый килограмм выводил бы из
+            бедности 0,2 человека в любом регионе, и {fmtInt(p.baseline_tonnes)} т помощи в год давали бы {fmtPeople(p.baseline_tonnes * 1000 * p.msu_coef)} человек. Это неправдоподобно много. Сравнение способов распределения от масштаба коэффициента не зависит: при любом его значении «по нужде»
+            выигрывает у «как сейчас» почти во столько же раз.
           </p>
           <p>
             Это статистическая связь, а не обещание: она учитывает «прочие равные», но не доказывает причинность. Поэтому числа людей годятся, чтобы
@@ -57,10 +65,23 @@ export function Method({ ds }: { ds: Dataset }) {
               <a href="https://fedstat.ru/indicator/31481" target="_blank" rel="noreferrer">ЕМИСС, 31481</a>.
             </li>
             <li>
-              Магазины X5: {fmtInt(osmTotal)} точек «Пятёрочки», «Перекрёстка» и «Чижика» с координатами из{' '}
-              <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> ({ds.meta.osm.fetched_at}), по границам
-              регионов geoBoundaries. Число по каждой сети пересчитано на официальный итог X5 на 31.12.2025: {fmtInt(o.pyaterochka)}, {fmtInt(o.perekrestok)} и{' '}
-              {fmtInt(o.chizhik)} (<a href={q.x5_stores.url} target="_blank" rel="noreferrer">источник</a>).
+              Магазины X5: официальное число по каждой сети и федеральному округу на 31.12.2025 ({fmtInt(o.pyaterochka)} «Пятёрочек», {fmtInt(o.perekrestok)}{' '}
+              «Перекрёстков», {fmtInt(o.chizhik)} «Чижиков»,{' '}
+              <a href="https://x5.ru/ru/about/where-we-operate/" target="_blank" rel="noreferrer">
+                x5.ru
+              </a>
+              ). Внутри округа магазины делятся по {fmtInt(osmTotal)} точкам{' '}
+              <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> ({ds.meta.osm.fetched_at}) по границам
+              geoBoundaries, включая сети «Красный Яр» и «Слата», которые X5 с 2025 года учитывает в «Пятёрочке». На Дальнем Востоке доли регионов взяты из
+              опубликованных X5 чисел магазинов по регионам ({fe.date},{' '}
+              <a href={fe.sources[0]} target="_blank" rel="noreferrer">
+                1
+              </a>
+              ,{' '}
+              <a href={fe.sources[1]} target="_blank" rel="noreferrer">
+                2
+              </a>
+              ). Ещё в {absent.length} регионах X5 по своим новостям пока не работает ({absent.join(', ')}), найденные там магазины с такими названиями местные.
             </li>
             <li>
               Исследование фонда и МГУ, оценка роста без НДС: <a href={q.msu.url} target="_blank" rel="noreferrer">пресс-релиз фонда</a>.
@@ -77,7 +98,10 @@ export function Method({ ds }: { ds: Dataset }) {
               Росстат публикует уровень бедности по {ds.regions.length} субъектам, без учёта новых субъектов (ДНР, ЛНР, Запорожской и Херсонской областей).
               Карта показывает эти {ds.regions.length}.
             </li>
-            <li>OpenStreetMap неполон: модель использует долю региона, а не абсолютное число магазинов, и пересчитывает её на официальный итог.</li>
+            <li>
+              Число магазинов в регионе — оценка: точен итог по округу, а доля региона внутри округа зависит от полноты OpenStreetMap. X5 сообщает о{' '}
+              {ds.meta.x5_regions_official} регионах присутствия, у нас магазины есть в {present}: точки «Пятёрочки» в OSM есть ещё в Дагестане.
+            </li>
             <li>Модель «помощь там, где магазины» заменяется фактом, как только фонд загружает выгрузку платформы.</li>
             <li>Население взято за {ds.meta.years.population}, бедность за {ds.meta.years.poverty}: число малоимущих в регионе — оценка.</li>
           </ul>
