@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+# личные заметки и копия виджета конкурса — не часть проекта
+BRIEF.md
+widget/
+.superpowers/
