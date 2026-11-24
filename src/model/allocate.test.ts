@@ -26,6 +26,12 @@ describe('allocate', () => {
     expect(rows.find((r) => r.iso === 'C')!.rub).toBe(0)
   })
 
+  it('current с фактическими весами из выгрузки фонда', () => {
+    const rows = allocate(REGIONS, S, 'current', { ...OPTS, currentWeights: { A: 1, B: 0, C: 3 } })
+    expect(rows.find((r) => r.iso === 'C')!.rub).toBeCloseTo(S * 0.75, 0)
+    expect(rows.find((r) => r.iso === 'B')!.rub).toBe(0)
+  })
+
   it('need: килограммы пропорциональны числу малоимущих', () => {
     const rows = allocate(REGIONS, S, 'need', OPTS)
     const kgPerPoor = rows.map((row) => row.kg / REGIONS.find((r) => r.iso === row.iso)!.poor)

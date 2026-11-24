@@ -9,6 +9,8 @@ export interface AllocateOptions {
   coef: number
   /** текущая помощь, кг в год: нужна стратегии «выровнять» */
   baseAid: AidMap
+  /** веса для «как сейчас»; по умолчанию число магазинов X5 (модель), с выгрузкой фонда — фактические кг */
+  currentWeights?: AidMap
 }
 
 export const STRATEGIES: Record<Strategy, { title: string; hint: string }> = {
@@ -25,8 +27,9 @@ export function allocate(regions: Region[], rub: number, strategy: Strategy, opt
 
   if (rub > 0 && eligible.length) {
     if (strategy === 'current') {
-      const total = eligible.reduce((s, r) => s + r.stores_est, 0)
-      if (total > 0) for (const r of eligible) shares.set(r.iso, (rub * r.stores_est) / total)
+      const w = (r: Region) => (opts.currentWeights ? opts.currentWeights[r.iso] ?? 0 : r.stores_est)
+      const total = eligible.reduce((s, r) => s + w(r), 0)
+      if (total > 0) for (const r of eligible) shares.set(r.iso, (rub * w(r)) / total)
     } else if (strategy === 'need') {
       const total = eligible.reduce((s, r) => s + r.poor * price(r), 0)
       for (const r of eligible) shares.set(r.iso, (rub * r.poor * price(r)) / total)
