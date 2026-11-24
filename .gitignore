@@ -12,3 +12,4 @@ data/raw/*.html
 data/raw/geoboundaries_*.geojson
 __pycache__/
 .pytest_cache/
+*.tsbuildinfo
