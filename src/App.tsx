@@ -118,7 +118,7 @@ function Main({ ds }: { ds: Dataset }) {
             <h1 id="h1">Куда отправить следующий килограмм помощи</h1>
             <p className="lead">
               Фонд «Выручаем» и МГУ выяснили: каждый дополнительный килограмм продуктовой помощи на душу в год связан со снижением бедности в регионе на
-              20,55 %. Значит, важно, куда он попадёт. Помощь собирают в магазинах X5, а их меньше всего там, где бедность выше.
+              20,55 %. Значит, важно, куда он попадёт. Помощь собирают в магазинах X5, а магазинов меньше там, где бедных больше. Карта показывает, куда направить деньги фонда, чтобы закрыть этот разрыв.
             </p>
             <ul className="findings">
               <li>
@@ -173,7 +173,12 @@ function Main({ ds }: { ds: Dataset }) {
                   onClose={() => setSel('')}
                 />
               ) : (
-                <RussiaCard worst={gaps.slice(0, 8)} usingUpload={!!upload} onSelect={select} />
+                <RussiaCard
+                  worst={(upload ? gaps : gaps.filter((g) => g.region.stores_est >= 1)).slice(0, 8)}
+                  noStores={upload ? [] : gaps.filter((g) => g.region.stores_est < 1).map((g) => g.region)}
+                  usingUpload={!!upload}
+                  onSelect={select}
+                />
               )}
             </div>
           </div>
