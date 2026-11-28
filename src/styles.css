@@ -141,6 +141,9 @@ h1 {
 .worst li::before { content: counter(w); grid-row: span 2; font: 700 22px/1 var(--xcond); color: var(--beet); }
 .worst .muted { font-size: 14px; }
 .no-stores { margin: 14px 0 0; line-height: 1.5; }
+.alloc-mode { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
+.cert-note { display: grid; gap: 8px; margin: 0 0 18px; max-width: 760px; }
+.cert-note p { margin: 0; }
 .link-btn { border: 0; padding: 0; background: none; color: var(--teal); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; text-align: left; font-weight: 500; }
 .link-btn:hover { color: var(--ink); }
 

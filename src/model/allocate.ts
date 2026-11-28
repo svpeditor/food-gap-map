@@ -11,6 +11,8 @@ export interface AllocateOptions {
   baseAid: AidMap
   /** веса для «как сейчас»; по умолчанию число магазинов X5 (модель), с выгрузкой фонда — фактические кг */
   currentWeights?: AidMap
+  /** только регионы с магазинами X5: сертификат фонда отоваривается в «Пятёрочке» или «Перекрёстке» */
+  onlyWithStores?: boolean
 }
 
 export const STRATEGIES: Record<Strategy, { title: string; hint: string }> = {
@@ -22,7 +24,7 @@ export const STRATEGIES: Record<Strategy, { title: string; hint: string }> = {
 /** Распределяет сумму rub (₽) по регионам выбранной стратегией. Возвращает строку на каждый регион. */
 export function allocate(regions: Region[], rub: number, strategy: Strategy, opts: AllocateOptions): AllocationRow[] {
   const price = (r: Region) => regionPrice(r, opts.pricePerKg)
-  const eligible = regions.filter((r) => r.poor > 0 && r.population > 0 && price(r) > 0)
+  const eligible = regions.filter((r) => r.poor > 0 && r.population > 0 && price(r) > 0 && (!opts.onlyWithStores || r.stores_est >= 1))
   const shares = new Map<string, number>()
 
   if (rub > 0 && eligible.length) {
@@ -62,4 +64,23 @@ export function summarize(rows: AllocationRow[]): { rub: number; kg: number; lif
     (s, r) => ({ rub: s.rub + r.rub, kg: s.kg + r.kg, lifted: s.lifted + r.lifted, regions: s.regions + (r.rub > 0 ? 1 : 0) }),
     { rub: 0, kg: 0, lifted: 0, regions: 0 },
   )
+}
+
+/**
+ * Переводит рубли по регионам в целые сертификаты номиналом nominal.
+ * Всего сертификатов floor(сумма / номинал), остаток раздаётся по наибольшим дробным частям.
+ */
+export function toCertificates(rows: AllocationRow[], nominal: number): Record<string, number> {
+  const out: Record<string, number> = {}
+  if (!(nominal > 0)) return out
+  const total = Math.floor(rows.reduce((s, r) => s + r.rub, 0) / nominal + 1e-9)
+  const exact = rows.map((r) => ({ iso: r.iso, x: r.rub / nominal }))
+  let given = 0
+  for (const e of exact) {
+    out[e.iso] = Math.floor(e.x + 1e-9)
+    given += out[e.iso]
+  }
+  const order = exact.filter((e) => e.x > 0).sort((a, b) => (b.x - Math.floor(b.x + 1e-9)) - (a.x - Math.floor(a.x + 1e-9)))
+  for (let i = 0; given < total && i < order.length; i++, given++) out[order[i].iso] += 1
+  return out
 }

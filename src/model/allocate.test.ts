@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { allocate, summarize } from './allocate'
+import { allocate, summarize, toCertificates } from './allocate'
 import { coverage, modelAid, regionPrice } from './metrics'
 import { REGIONS } from './fixture'
 
@@ -65,5 +65,31 @@ describe('allocate', () => {
     const need = summarize(allocate(REGIONS, S, 'need', OPTS))
     expect(need.lifted).toBeGreaterThan(cur.lifted)
     expect(cur.rub).toBeCloseTo(S, 0)
+  })
+})
+
+describe('сертификаты фонда', () => {
+  for (const s of ['current', 'need', 'equalize'] as const) {
+    it(`${s}: только регионы с магазинами X5, вся сумма распределена`, () => {
+      const rows = allocate(REGIONS, S, s, { ...OPTS, onlyWithStores: true })
+      expect(rows.find((r) => r.iso === 'C')!.rub).toBe(0)
+      expect(sum(rows.map((r) => r.rub))).toBeCloseTo(S, 0)
+    })
+  }
+
+  it('целые сертификаты: всего floor(сумма / номинал), каждому не меньше целой части', () => {
+    const rows = allocate(REGIONS, 10_001_000, 'need', { ...OPTS, onlyWithStores: true })
+    const certs = toCertificates(rows, 2500)
+    expect(sum(Object.values(certs))).toBe(4000)
+    for (const r of rows) {
+      expect(Number.isInteger(certs[r.iso])).toBe(true)
+      expect(certs[r.iso]).toBeGreaterThanOrEqual(Math.floor(r.rub / 2500))
+      expect(certs[r.iso]).toBeLessThanOrEqual(Math.ceil(r.rub / 2500))
+    }
+  })
+
+  it('номинал больше суммы: ни одного сертификата', () => {
+    const rows = allocate(REGIONS, 1000, 'need', { ...OPTS, onlyWithStores: true })
+    expect(sum(Object.values(toCertificates(rows, 2500)))).toBe(0)
   })
 })
